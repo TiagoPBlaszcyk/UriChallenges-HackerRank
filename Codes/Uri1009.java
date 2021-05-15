@@ -4,9 +4,9 @@ public class Uri1009 {
     public static void main(String[] args) {
 
         Scanner s = new Scanner(System.in);
-        String a;
+        //String a;
         Double b,c,x;
-        a = s.nextLine();
+        //a = s.nextLine();
         b = s.nextDouble();
         c = s.nextDouble();
     
