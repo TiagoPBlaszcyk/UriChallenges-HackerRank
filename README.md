@@ -2,7 +2,7 @@
 
 Hellow Whatizape!
 
-My responses to Uri challenges
+My responses to Uri challenges /UriChallenges/src/
 
 lO0k!
 
