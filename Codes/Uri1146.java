@@ -1,12 +1,9 @@
 import java.util.Scanner;
-
-public class Main1146 {
+public class Uri1146 {
     public static void main(String[] args){
-
         Scanner s = new Scanner(System.in);
         int num;
         String exit = "";
-        
         num = s.nextInt();
         while (num != 0) {
             for (int i = 1; i <= num; i++) {

@@ -1,14 +1,19 @@
 import java.util.Scanner;
 
-public class Main1006 {
+public class Uri1009 {
     public static void main(String[] args) {
 
         Scanner s = new Scanner(System.in);
-        Double a, b, c;
-        a = s.nextDouble();
+        String a;
+        Double b,c,x;
+        a = s.nextLine();
         b = s.nextDouble();
         c = s.nextDouble();
-        System.out.printf("MEDIA = %.1f\n", (((a * 2) + (b * 3) + (c * 5)) / 10));
+    
+        x = 0.15 * c + b;
+
+        System.out.printf("TOTAL = R$ %.2f\n", (x));
+
         s.close();
     }
 }
