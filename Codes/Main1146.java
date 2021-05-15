@@ -17,6 +17,7 @@ public class Main1146 {
             exit = "";
             num = s.nextInt();
         }
+        s.close();
     }      
 }
  
