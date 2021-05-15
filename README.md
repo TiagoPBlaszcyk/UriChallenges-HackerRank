@@ -1,6 +1,18 @@
 ## Getting Started
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Hellow Whatizape!
+
+My responses to Uri challenges
+
+lO0k!
+
+urionlinejudge.com.br
+
+File name (Main1000.java)
+
+1000 is the challenge number
+
+
 
 ## Folder Structure
 
