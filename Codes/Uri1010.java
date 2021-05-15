@@ -1,3 +1,4 @@
+// Calcula o total de uma compra, passando quantidade de protudos e o valor.
 import java.util.Scanner;
 
 public class Uri1010 {

@@ -1,3 +1,4 @@
+// Calcula area de uma circunferencia apartir do raio informado
 import java.util.Scanner;
 
 public class Uri1011 {

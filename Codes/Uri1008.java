@@ -1,3 +1,5 @@
+// Calcula salario de trabalhadores de acordo com carga horaria e valor pago por hora
+// Entre com  Codigo do trabalhador, quantidade de horas, valor de cada hora
 import java.util.Scanner;
 
 public class Uri1008 {

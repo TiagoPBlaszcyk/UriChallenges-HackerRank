@@ -1,3 +1,4 @@
+// Conta de 1 ate o numero informado
 import java.util.Scanner;
 public class Uri1146 {
     public static void main(String[] args){

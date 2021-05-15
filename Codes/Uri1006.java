@@ -1,3 +1,4 @@
+// Realiza a media ponderada com pesos 2,3,5. 
 import java.util.Scanner;
 
 public class Uri1006 {

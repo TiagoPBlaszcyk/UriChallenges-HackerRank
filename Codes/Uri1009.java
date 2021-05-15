@@ -1,3 +1,5 @@
+// Calcula o salario de vendedores (considerando comissao de 15%)
+// passe valor do salario, total de vendas.
 import java.util.Scanner;
 
 public class Uri1009 {
