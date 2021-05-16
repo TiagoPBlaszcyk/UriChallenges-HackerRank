@@ -11,8 +11,8 @@ public class Uri1009 {
         //a = s.nextLine();
         b = s.nextDouble();
         c = s.nextDouble();
-    
-        x = 0.15 * c + b;
+
+        x = 15f / 100 * c + b;
 
         System.out.printf("TOTAL = R$ %.2f\n", (x));
 
