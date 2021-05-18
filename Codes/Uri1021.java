@@ -12,9 +12,13 @@ MOEDAS:
 0 moeda(s) de R$ 0.25
 2 moeda(s) de R$ 0.10
 0 moeda(s) de R$ 0.05
-3 moeda(s) de R$ 0.01 */
+3 moeda(s) de R$ 0.01 
+*/
+
 // Deste modo o site não aceita, não consegui encontrar o que seria. Vai no bracal copiando do site a formatação x.x
-import java.util.Locale;
+
+/*
+//import java.util.Locale;
 import java.util.Scanner;
 public class Uri1021 {
     public static final Double[] cedula = {100.00, 50.00, 20.00, 10.00, 5.00, 2.00, 1.00, 0.50, 0.25, 0.10, 0.05, 0.01};
@@ -24,7 +28,7 @@ public class Uri1021 {
         Double valor = s.nextDouble();
         int aux = 0;
         s.close();
-        Locale.setDefault(Locale.US);
+       // Locale.setDefault(Locale.US);
         System.out.println("NOTAS:");
         for (int i = 0; i < 6; i++) {
             aux = (int) (valor / cedula[i]);
@@ -39,6 +43,81 @@ public class Uri1021 {
         }    
     }
 }
+*/
+
+import java.util.Locale;
+import java.util.Scanner;
+public class Uri1021 {
+    public static final Double[] cedula = {100.00, 50.00, 20.00, 10.00, 5.00, 2.00, 1.00, 0.50, 0.25, 0.10, 0.05, 0.01};
+    public static void main(String[] args) {
+        Locale.setDefault(Locale.US);
+        Scanner s = new Scanner(System.in);
+        Double valor = s.nextDouble();
+        s.close();
+        valor = (valor * 100) + 0.05;
+        int aux;
+        int a = 0;
+        int b = cedula.length / 2;
+        boolean flag = true;
+        String tipo_d = "";
+        String[] td = {"nota","moeda"};
+
+        for (int i = 0; i < td.length; i++) {
+            
+            if (flag == true) {
+                System.out.println(td[0].toUpperCase() + "S:");
+                tipo_d = td[0];
+                flag = false; 
+            }else {
+                System.out.println(td[1].toUpperCase() + "S:");
+                tipo_d = td[1];
+                a = b;
+                b = cedula.length;
+            }
+
+            for (int j = a; j < b; j++) {
+                aux = (int) (valor / (cedula[j] * 100));
+                System.out.printf("%d %s(s) de R$ %.2f\n", aux, tipo_d , cedula[j]);
+                valor -= aux * (cedula[j] * 100);
+            } 
+        }       
+    }
+}
+
+/*
+import java.util.Locale;
+import java.util.Scanner;
+public class Main {
+    public static final Double[] cedula = {100.00, 50.00, 20.00, 10.00, 5.00, 2.00, 1.00, 0.50, 0.25, 0.10, 0.05, 0.01};
+    public static void main(String[] args) {
+        Locale.setDefault(Locale.US);
+        Scanner s = new Scanner(System.in);
+        Double valor = s.nextDouble();
+        s.close();
+        valor = (valor * 100) + 0.05;
+        int aux;
+        int a = 0;
+        int b = cedula.length / 2;
+        boolean flag = true;
+
+        for (int i = 0; i < 2; i++) {
+
+            System.out.println(flag == true ? ("NOTAS:") : ("MOEDAS:"));
+            String tipo_d = flag == true ? "nota" : "moeda";
+
+            for (int j = a; j < b; j++) {
+                aux = (int) (valor / (cedula[j] * 100));
+                System.out.printf("%d %s(s) de R$ %.2f\n", aux, tipo_d , cedula[j]);
+                valor -= aux * (cedula[j] * 100);
+            } 
+            a = b;
+            b = cedula.length;
+            flag = false;
+        }
+          
+    }
+}
+*/
 
 /* import java.util.Scanner;
 public class Uri1021 {
