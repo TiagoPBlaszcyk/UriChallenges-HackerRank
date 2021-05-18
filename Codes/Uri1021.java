@@ -45,7 +45,7 @@ public class Uri1021 {
 }
 */
 
-import java.util.Locale;
+/* import java.util.Locale;
 import java.util.Scanner;
 public class Uri1021 {
     public static final Double[] cedula = {100.00, 50.00, 20.00, 10.00, 5.00, 2.00, 1.00, 0.50, 0.25, 0.10, 0.05, 0.01};
@@ -82,103 +82,74 @@ public class Uri1021 {
             } 
         }       
     }
+} */
+import java.util.Scanner;
+public class Uri1021 {
+    public static final Double[] cedula = {100.00, 50.00, 20.00, 10.00, 5.00, 2.00, 1.00, 0.50, 0.25, 0.10, 0.05, 0.01};
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        Double valor = s.nextDouble(); s.close(); valor = (valor * 100) + 0.05;
+        int aux,a = 0,b = cedula.length / 2;
+        boolean flag = true;
+        String[] td = {"nota", "moeda"};
+        for (int i = 0; i < 2; i++) {
+            System.out.println((flag == true ? td[0].toUpperCase() : td[1].toUpperCase()) + "S:");
+            String tipo_d = flag == true ? td[0] : td[1];
+            for (int j = a; j < b; j++) {
+                aux = (int) (valor / (cedula[j] * 100));
+                System.out.printf("%d %s(s) de R$ %.2f\n", aux, tipo_d, cedula[j]);
+                valor -= aux * (cedula[j] * 100);}
+            if (flag == true) {
+                a = b;
+                b = cedula.length;
+                flag = false;}
+        }
+    }
 }
 
 /*
-import java.util.Locale;
-import java.util.Scanner;
-public class Main {
-    public static final Double[] cedula = {100.00, 50.00, 20.00, 10.00, 5.00, 2.00, 1.00, 0.50, 0.25, 0.10, 0.05, 0.01};
-    public static void main(String[] args) {
-        Locale.setDefault(Locale.US);
-        Scanner s = new Scanner(System.in);
-        Double valor = s.nextDouble();
-        s.close();
-        valor = (valor * 100) + 0.05;
-        int aux;
-        int a = 0;
-        int b = cedula.length / 2;
-        boolean flag = true;
-
-        for (int i = 0; i < 2; i++) {
-
-            System.out.println(flag == true ? ("NOTAS:") : ("MOEDAS:"));
-            String tipo_d = flag == true ? "nota" : "moeda";
-
-            for (int j = a; j < b; j++) {
-                aux = (int) (valor / (cedula[j] * 100));
-                System.out.printf("%d %s(s) de R$ %.2f\n", aux, tipo_d , cedula[j]);
-                valor -= aux * (cedula[j] * 100);
-            } 
-            a = b;
-            b = cedula.length;
-            flag = false;
-        }
-          
-    }
-}
-*/
-
-/* import java.util.Scanner;
-public class Uri1021 {
-    public static void main(String[] args) {
-        int aux = 0;
-        Scanner s = new Scanner(System.in);
-        Double valor = s.nextDouble();
-        s.close();
-        
-        System.out.println("NOTAS:");
-     
-            aux = (int) (valor / 100);
-            System.out.println(aux + " nota(s) de R$ 100.00");
-            valor = valor % 100;
-
-            aux = (int) (valor / 50);
-            System.out.println(aux + " nota(s) de R$ 50.00");
-            valor = valor % 50;
-
-            aux = (int) (valor / 20);
-            System.out.println(aux + " nota(s) de R$ 20.00");
-            valor = valor % 20;
-
-            aux = (int) (valor / 10);
-            System.out.println(aux + " nota(s) de R$ 10.00");
-            valor = valor % 10;
-
-            aux = (int) (valor / 5);
-            System.out.println(aux + " nota(s) de R$ 5.00");
-            valor = valor % 5;
-
-            aux = (int) (valor / 2);
-            System.out.println(aux + " nota(s) de R$ 2.00");
-            valor = valor % 2;
-       
-        System.out.println("MOEDAS:");
-      
-            aux = (int) (valor / 1.00);
-            System.out.println(aux + " moeda(s) de R$ 1.00");
-            valor = valor % 1.00;
-
-            aux = (int) (valor / 0.50);
-            System.out.println(aux + " moeda(s) de R$ 0.50");
-            valor = valor % 0.50;
-
-            aux = (int) (valor / 0.25);
-            System.out.println(aux + " moeda(s) de R$ 0.25");
-            valor = valor % 0.25;
-
-            aux = (int) (valor / 0.10);
-            System.out.println(aux + " moeda(s) de R$ 0.10");
-            valor = valor % 0.10;
-
-            aux = (int) (valor / 0.05);
-            System.out.println(aux + " moeda(s) de R$ 0.05");
-            valor = valor % 0.05;
-
-            aux = (int) (valor / 0.01);
-            System.out.println(aux + " moeda(s) de R$ 0.01");
-            valor = valor % 0.01;
-    }
-}
-
+ * import java.util.Scanner; public class Uri1021 { public static void
+ * main(String[] args) { int aux = 0; Scanner s = new Scanner(System.in); Double
+ * valor = s.nextDouble(); s.close();
+ * 
+ * System.out.println("NOTAS:");
+ * 
+ * aux = (int) (valor / 100); System.out.println(aux + " nota(s) de R$ 100.00");
+ * valor = valor % 100;
+ * 
+ * aux = (int) (valor / 50); System.out.println(aux + " nota(s) de R$ 50.00");
+ * valor = valor % 50;
+ * 
+ * aux = (int) (valor / 20); System.out.println(aux + " nota(s) de R$ 20.00");
+ * valor = valor % 20;
+ * 
+ * aux = (int) (valor / 10); System.out.println(aux + " nota(s) de R$ 10.00");
+ * valor = valor % 10;
+ * 
+ * aux = (int) (valor / 5); System.out.println(aux + " nota(s) de R$ 5.00");
+ * valor = valor % 5;
+ * 
+ * aux = (int) (valor / 2); System.out.println(aux + " nota(s) de R$ 2.00");
+ * valor = valor % 2;
+ * 
+ * System.out.println("MOEDAS:");
+ * 
+ * aux = (int) (valor / 1.00); System.out.println(aux + " moeda(s) de R$ 1.00");
+ * valor = valor % 1.00;
+ * 
+ * aux = (int) (valor / 0.50); System.out.println(aux + " moeda(s) de R$ 0.50");
+ * valor = valor % 0.50;
+ * 
+ * aux = (int) (valor / 0.25); System.out.println(aux + " moeda(s) de R$ 0.25");
+ * valor = valor % 0.25;
+ * 
+ * aux = (int) (valor / 0.10); System.out.println(aux + " moeda(s) de R$ 0.10");
+ * valor = valor % 0.10;
+ * 
+ * aux = (int) (valor / 0.05); System.out.println(aux + " moeda(s) de R$ 0.05");
+ * valor = valor % 0.05;
+ * 
+ * aux = (int) (valor / 0.01); System.out.println(aux + " moeda(s) de R$ 0.01");
+ * valor = valor % 0.01; } }
+ * 
  */
