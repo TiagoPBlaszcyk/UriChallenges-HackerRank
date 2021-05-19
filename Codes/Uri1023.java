@@ -16,7 +16,6 @@ public class Uri1023 {
         s.close();
         if ((a == 0) | (b * b - 4 * a * c < 0)) {
 			System.out.println("Impossivel calcular");
-			return;
 		}
         double bascara = Math.sqrt((b * b) - 4 * a * c);
         double r1 = (-b + bascara) / (2 * a);
