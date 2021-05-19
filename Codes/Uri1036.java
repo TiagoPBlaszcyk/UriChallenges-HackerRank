@@ -6,7 +6,7 @@
 // 10,3 203,0 5,0 \\ 10.0 20.1 5.1   Experimente e.e
 
 import java.util.Scanner;
-public class Uri1023 {
+public class Uri1036 {
 	
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
@@ -30,7 +30,7 @@ public class Uri1023 {
 /*
 import java.util.Locale;
 import java.util.Scanner;
-public class Uri1023 {
+public class Uri1036 {
     public static void main(String[] args) {
         Locale.setDefault(Locale.US);
         Scanner s = new Scanner(System.in);
