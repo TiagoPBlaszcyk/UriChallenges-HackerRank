@@ -7,7 +7,7 @@ const cedula = [100, 50, 20, 10, 5, 2, 1]
 var contagem = 0
 
 console.log(valor)
-cedulas(valor, 0)
+cedulas(valor, 0) 
 
 function cedulas(valor, j) {
     if (j < cedula.length) {
