@@ -1,4 +1,4 @@
-function Uri1043(a, b, c) {
+const Uri1043 = function Uri1043(a, b, c) {
     if ((a < b + c) && (b < a + c) && (c < b + a)) {
         let perimetro = a + b + c
         console.log("Perimetro =", perimetro)
